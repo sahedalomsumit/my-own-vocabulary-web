@@ -13,7 +13,6 @@
 > This repository contains the web landing page and companion site for the My Own Vocabulary Android app.
 
 ---
-
 ## ✨ Key Features
 
 - **🗂️ 3-Tier Folder Structure**: Organize vocabulary as **Languages → Sources → Folders** with independent language pairs and cascading filters.
@@ -25,7 +24,6 @@
 - **🌓 Dynamic UI**: Light, Dark, and System theme modes with premium glassmorphism and tactile spring animations.
 
 ---
-
 ## 🚀 Tech Stack
 
 - **Structure**: Semantic HTML5
@@ -34,20 +32,16 @@
 - **Interactivity**: Vanilla JavaScript for theme switching and UI logic.
 
 ---
-
 ## 🤝 Support the Mission
 
 My Own Vocabulary is free and 100% ad-free. If it helps you learn, consider supporting its maintenance and future development:
 
 - **International**: [Donate via Stripe](https://donate.stripe.com/3cI8wO6bWcqd7F46az8AE01)
-- **Bangladesh**: bKash Send Money to `01773615582` (Personal)
 
 ---
-
 ## ⚖️ License
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
 ---
-
 Built with ❤️ by [Sahed Alom Sumit](https://sahedalomsumit.com)
