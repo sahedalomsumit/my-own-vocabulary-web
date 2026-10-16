@@ -60,15 +60,13 @@ if (aura1 && aura2) {
 
 // Sticky Header Logic
 const header = document.getElementById('main-header');
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 50) {
-    header.classList.add('py-4');
-    header.classList.remove('py-6');
-  } else {
-    header.classList.remove('py-4');
-    header.classList.add('py-6');
-  }
-});
+if (header) {
+  const syncHeaderState = () => {
+    header.classList.toggle('is-scrolled', window.scrollY > 40);
+  };
+  window.addEventListener('scroll', syncHeaderState, { passive: true });
+  syncHeaderState();
+}
 
 
 // Mobile Menu
@@ -130,6 +128,20 @@ function closeMenu() {
 mobileMenu.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', closeMenu);
 });
+
+// Live Helsinki clock (mobile drawer)
+const helsinkiTime = document.getElementById('helsinki-time');
+if (helsinkiTime) {
+  const renderHelsinkiTime = () => {
+    helsinkiTime.textContent = new Intl.DateTimeFormat('en-GB', {
+      timeZone: 'Europe/Helsinki',
+      hour: '2-digit',
+      minute: '2-digit'
+    }).format(new Date());
+  };
+  renderHelsinkiTime();
+  setInterval(renderHelsinkiTime, 30000);
+}
 
 // Scroll Reveal
 const revealElements = document.querySelectorAll('.reveal');

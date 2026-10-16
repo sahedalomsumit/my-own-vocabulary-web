@@ -1,9 +1,9 @@
-# 🕋 Salah Tracker Web
+# 🌿 My Own Vocabulary Web
 
 <div align="center">
-  <img src="img/Salah-Tracker-App-Showcase.png" alt="Salah Tracker App Feature Image" width="800">
+  <img src="img/feature-graphic-my-own-vocabulary.jpg" alt="My Own Vocabulary Feature Image" width="800">
   <br>
-  <a href="https://play.google.com/store/apps/details?id=com.sahed.salah_tracker" target="_blank">
+  <a href="https://play.google.com/store/apps/details?id=com.sahed.my_own_vocabulary" target="_blank">
     <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" height="80">
   </a>
 </div>
@@ -11,26 +11,23 @@
 
 [![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 
-A premium, mindful prayer companion for the modern Muslim. **Salah Tracker App** is designed to help you build consistency in your spiritual journey through effortless logging, insightful analytics, and a beautiful, distraction-free interface.
+A luxury, offline-first vocabulary companion. **My Own Vocabulary** helps you save new words, practice with quizzes, and track your progress over time through a beautiful, distraction-free interface.
 
 > [!NOTE]
-> This repository contains the web landing page and companion site for the Salah Tracker ecosystem.
+> This repository contains the web landing page and companion site for the My Own Vocabulary Android app.
 
 ---
 
 ## ✨ Key Features
 
-- **🚫 100% Ad-Free**: No interruptions, no banners, no distractions. Just you and your goals.
-- **📝 Effortless Logging**: Track Fajr, Dhuhr, Asr, Maghrib, and Isha with a single tap.
-- **📊 Advanced Analytics**:
-  - Dynamic dashboard with completion rates.
-  - 7-Day stacked bar charts for habit visualization.
-  - Weekly distribution pie charts.
-- **🔥 Build Your Streak**: Stay motivated with a persistent streak counter.
-- **🔒 Secure Cloud Sync**: Google Sign-In support via Supabase to keep your data safe across devices.
-- **🌓 Dynamic UI**: Support for Light, Dark, and System theme modes with premium glassmorphism effects.
-- **📱 Fully Responsive**: Optimized for a flawless experience across all devices and screen sizes.
-- **🌍 Multilingual**: Fully localized in English and Bangla (বাংলা).
+- **🚫 100% Ad-Free**: No interruptions, no banners, no distractions. Just you and your words.
+- **🗂️ 3-Tier Folder Structure**: Organize vocabulary as **Languages → Sources → Folders** with independent language pairs and cascading filters.
+- **🎨 German Article & Gender Colors**: Instant recognition with signature color coding for `der` (blue), `die` (rose), and `das` (emerald), plus distinct part-of-speech badges.
+- **🧠 Active Recall Quizzes**: Multiple choice, 3D flashcards, spelling tests, and a dedicated "Retry Mistakes" mode.
+- **📅 Daily Calendar & Streaks**: A month grid with per-day word indicators, daily activity inspection, and a hero streak tracker.
+- **🔊 Native Text-To-Speech**: Authentic pronunciation in 29+ languages with configurable rate and pitch.
+- **🔒 Offline-First & Cloud Sync**: Local Room database with two-way Firebase Firestore sync, Google Sign-In, and JSON backup/import.
+- **🌓 Dynamic UI**: Light, Dark, and System theme modes with premium glassmorphism and tactile spring animations.
 
 ---
 
@@ -45,7 +42,7 @@ A premium, mindful prayer companion for the modern Muslim. **Salah Tracker App**
 
 ## 🤝 Support the Mission
 
-If you benefit from this project, consider giving **Sadaqah** to support maintenance and future development:
+My Own Vocabulary is free and 100% ad-free. If it helps you learn, consider supporting its maintenance and future development:
 
 - **International**: [Donate via Stripe](https://donate.stripe.com/3cI8wO6bWcqd7F46az8AE01)
 - **Bangladesh**: bKash Send Money to `01773615582` (Personal)

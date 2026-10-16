@@ -3,10 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Salah Tracker App – A Mindful Prayer Companion</title>
+    <link rel="icon" type="image/png" href="img/Favicon.png" />
+    <link rel="apple-touch-icon" href="img/Favicon.png" />
+    <title>My Own Vocabulary | Sahed Alom Sumit</title>
     <meta
       name="description"
-      content="Salah Tracker – A mindful prayer companion for the modern Muslim. Track your prayers, build consistency, and stay mindful with this 100% ad-free app."
+      content="My Own Vocabulary – a luxury, offline-first vocabulary app. Save new words, practice with quizzes, and track your progress over time. 100% ad-free."
+    />
+    <link rel="canonical" href="https://my-own-vocabulary.sahed.dev/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="My Own Vocabulary" />
+    <meta
+      property="og:description"
+      content="Save new words, practice with quizzes, and track your progress over time. A luxury, offline-first vocabulary app."
+    />
+    <meta
+      property="og:image"
+      content="img/feature-graphic-my-own-vocabulary.jpg"
     />
 
     <!-- Fonts -->
@@ -25,124 +40,211 @@
     <!-- Custom Styles -->
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="bg-[#050505] text-white selection:bg-violet-500/30">
+  <body class="bg-[var(--bg)] text-[var(--c-100)] selection:bg-[rgba(var(--c-500-rgb),0.30)]">
     <div id="cursor" class="hidden md:block"></div>
     <div class="aura" id="aura-1" style="top: -10%; left: -10%"></div>
     <div class="aura" id="aura-2" style="bottom: -10%; right: -10%"></div>
 
-    <!-- Top Bar -->
-    <div
-      class="w-full bg-[#080808] py-3 px-4 flex flex-col md:flex-row justify-center items-center tech-label border-b border-white/5 z-[60] relative"
-    >
-      <div class="flex items-center gap-3 text-emerald-500">
-        <div class="pulse-dot"></div>
-        <span class="text-white">SYSTEM_STATUS:</span>
-        OPEN FOR COLLABORATIONS
-      </div>
-      <span class="text-white/10 mx-6 hidden md:block">|</span>
-      <div class="flex gap-6 mt-2 md:mt-0">
-        <a
-          href="https://wa.me/+358415765539"
-          class="text-gray-400 hover:text-white transition-colors"
-          target="_blank"
-          rel="noopener noreferrer"
-          >MESSAGE_WHATSAPP »</a
-        >
-      </div>
-    </div>
-
     <!-- Header -->
     <header
       id="main-header"
-      class="sticky top-0 w-full z-[70] sticky-header transition-all py-6"
+      class="site-header fixed top-0 w-full z-[70] transition-all duration-300"
     >
-      <div class="px-6 max-w-7xl mx-auto flex items-center justify-between">
+      <div
+        class="site-header-inner px-4 sm:px-6 max-w-7xl mx-auto flex items-center justify-between"
+      >
+        <!-- Brand -->
         <a
           href="index.html"
-          class="flex items-center group cursor-pointer z-[60]"
+          class="site-brand flex min-w-0 items-center gap-2 md:gap-3.5 group cursor-pointer z-[60]"
         >
-          <img
-            class="sas-logo transition-transform group-hover:scale-105 w-32"
-            src="img/logo-sahed-alom-sumit.png"
-            alt="Sahed Alom Sumit Official Logo"
-          />
-          <div class="hidden md:block h-6 w-[1px] bg-white/10 mx-6"></div>
-          <div
-            class="hidden lg:block font-mono text-[9px] text-gray-500 uppercase tracking-tighter leading-tight"
-          >
-            Designer & Developer<br />
-            <span class="text-emerald-500 italic">Availability: High</span>
-          </div>
+          <span class="sas-mark" aria-hidden="true">SAS</span>
+          <span
+            class="site-brand-divider hidden sm:block"
+            aria-hidden="true"
+          ></span>
+          <span class="site-brand-text hidden sm:flex">
+            <span class="site-brand-name">Sahed Alom Sumit</span>
+            <span class="site-brand-role"
+              >Product Designer &amp; AI-Enhanced Dev</span
+            >
+          </span>
         </a>
 
-        <!-- Desktop Nav -->
-        <nav class="hidden md:flex items-center gap-10">
+        <!-- Desktop Navigation -->
+        <nav class="site-nav hidden md:flex items-center" aria-label="Primary">
           <a
             href="index.html"
-            class="tech-label font-bold text-violet-400 border-b border-violet-500 pb-1 transition-all"
-            >./HOME</a
+            class="site-nav-link is-active"
+            aria-current="page"
+            >Home</a
           >
-          <a
-            href="privacy-policy.html"
-            class="tech-label font-bold text-white hover:text-violet-400 border-b border-transparent hover:border-violet-500/50 pb-1 transition-all"
-            >./PRIVACY_POLICY</a
-          >
-          <a
-            href="data-deletion.html"
-            class="tech-label font-bold text-white hover:text-violet-400 border-b border-transparent hover:border-violet-500/50 pb-1 transition-all"
-            >./DATA_DELETION</a
-          >
+          <a href="privacy-policy.html" class="site-nav-link">Privacy Policy</a>
+          <a href="data-deletion.html" class="site-nav-link">Data Deletion</a>
         </nav>
 
+        <!-- Right Action Group -->
+        <div class="site-header-actions hidden md:flex items-center gap-3">
+          <a
+            href="mailto:sahedalomsumit@gmail.com"
+            class="site-header-cta flex items-center"
+          >
+            <span>Let's Talk</span>
+            <svg
+              class="w-3.5 h-3.5"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+            >
+              <path
+                d="M5 12h14M12 5l7 7-7 7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+        </div>
+
         <!-- Mobile Hamburger Button -->
-        <button
-          id="menu-btn"
-          class="md:hidden z-[80] relative w-10 h-10 flex items-center justify-center focus:outline-none"
-          aria-label="Toggle Menu"
-        >
-          <div class="w-6 flex flex-col items-end gap-1.5">
-            <span
-              class="block h-0.5 bg-white transition-all duration-300 w-6"
-            ></span>
-            <span
-              class="block h-0.5 bg-white transition-all duration-300 w-4"
-            ></span>
-            <span
-              class="block h-0.5 bg-white transition-all duration-300 w-5"
-            ></span>
-          </div>
-        </button>
+        <div class="md:hidden z-[80] flex items-center">
+          <button
+            id="menu-btn"
+            class="menu-toggle"
+            aria-label="Open Navigation Menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <div class="w-5 flex flex-col items-end gap-1.5">
+              <span class="block h-0.5 w-5 rounded-full"></span>
+              <span class="block h-0.5 w-3.5 rounded-full"></span>
+              <span class="block h-0.5 w-4 rounded-full"></span>
+            </div>
+          </button>
+        </div>
       </div>
     </header>
 
-    <!-- Fullscreen Mobile Overlay -->
+    <!-- Fullscreen Mobile Drawer -->
     <div
       id="mobile-menu"
-      class="fixed inset-0 bg-[#050505] z-[55] flex flex-col items-center justify-center md:hidden"
-      style="display: none; opacity: 0; transform: translateX(100%);"
+      class="fixed inset-0 z-[100000] flex flex-col justify-between p-6 sm:p-8 md:hidden backdrop-blur-2xl overflow-y-auto min-h-[100dvh]"
+      style="display: none; background-color: var(--mobile-menu-bg)"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Mobile Navigation"
     >
-      <div class="flex flex-col items-center gap-12">
-        <a href="index.html" class="group flex items-baseline gap-4">
-          <span class="font-mono text-violet-500 text-xs">01_</span>
+      <!-- Drawer Top Bar -->
+      <div
+        class="flex justify-between items-center w-full pb-4 border-b border-white/10 shrink-0"
+      >
+        <div class="flex items-center gap-2.5">
+          <a href="index.html" class="group flex items-center gap-2">
+            <span class="sas-mark" aria-hidden="true">SAS</span>
+          </a>
+          <span class="pill-badge">
+            <span
+              class="w-1.5 h-1.5 bg-[var(--status)] rounded-full animate-pulse"
+            ></span>
+            Available
+          </span>
+        </div>
+
+        <button
+          id="menu-close"
+          class="menu-toggle"
+          aria-label="Close Navigation Menu"
+        >
+          <svg
+            class="w-5 h-5"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Nav Links -->
+      <nav
+        class="flex flex-col gap-3 sm:gap-4 my-auto py-6"
+        aria-label="Mobile"
+      >
+        <a
+          href="index.html"
+          class="mobile-menu-link group flex items-center justify-between py-2 border-b border-white/10"
+          aria-current="page"
+        >
           <span
-            class="text-4xl font-black tracking-tighter uppercase transition-colors text-white"
-            >HOME</span
+            class="mobile-menu-label text-2xl sm:text-3xl font-black tracking-tight uppercase text-[var(--c-500)]"
+            >Home</span
+          >
+          <span
+            class="font-mono text-xs text-[var(--c-300)] group-hover:text-[var(--c-100)] transition-colors"
+            >01 →</span
           >
         </a>
-        <a href="privacy-policy.html" class="group flex items-baseline gap-4">
-          <span class="font-mono text-violet-500 text-xs">02_</span>
+        <a
+          href="privacy-policy.html"
+          class="mobile-menu-link group flex items-center justify-between py-2 border-b border-white/10"
+        >
           <span
-            class="text-4xl font-black tracking-tighter uppercase transition-colors text-white/40 group-hover:text-white"
-            >PRIVACY_POLICY</span
+            class="mobile-menu-label text-2xl sm:text-3xl font-black tracking-tight uppercase text-[var(--c-100)]"
+            >Privacy Policy</span
+          >
+          <span
+            class="font-mono text-xs text-[var(--c-300)] group-hover:text-[var(--c-100)] transition-colors"
+            >02 →</span
           >
         </a>
-        <a href="data-deletion.html" class="group flex items-baseline gap-4">
-          <span class="font-mono text-violet-500 text-xs">03_</span>
+        <a
+          href="data-deletion.html"
+          class="mobile-menu-link group flex items-center justify-between py-2 border-b border-white/10"
+        >
           <span
-            class="text-4xl font-black tracking-tighter uppercase transition-colors text-white/40 group-hover:text-white"
-            >DATA_DELETION</span
+            class="mobile-menu-label text-2xl sm:text-3xl font-black tracking-tight uppercase text-[var(--c-100)]"
+            >Data Deletion</span
+          >
+          <span
+            class="font-mono text-xs text-[var(--c-300)] group-hover:text-[var(--c-100)] transition-colors"
+            >03 →</span
           >
         </a>
+      </nav>
+
+      <!-- Drawer Footer CTA -->
+      <div class="flex flex-col gap-4 shrink-0 pt-2 pb-2">
+        <a
+          href="mailto:sahedalomsumit@gmail.com"
+          class="site-header-cta site-header-cta--block flex items-center"
+        >
+          <span>Let's Talk</span>
+          <svg
+            class="w-3.5 h-3.5"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+          >
+            <path
+              d="M5 12h14M12 5l7 7-7 7"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+        <div
+          class="flex justify-between items-center text-xs font-mono"
+          style="color: var(--c-300)"
+        >
+          <span>Helsinki, Finland 🇫🇮</span>
+          <span id="helsinki-time" class="site-clock"></span>
+        </div>
       </div>
     </div>
 
@@ -155,44 +257,74 @@
         >
           <div class="flex justify-center mb-10">
             <div class="relative group">
-              <div class="absolute -inset-1 bg-emerald-500/20 rounded-[2rem] blur-xl group-hover:bg-emerald-500/30 transition duration-1000 group-hover:duration-200"></div>
+              <div
+                class="absolute -inset-1 bg-[rgba(var(--c-500-rgb),0.20)] rounded-[2rem] blur-xl group-hover:bg-[rgba(var(--c-500-rgb),0.30)] transition duration-1000 group-hover:duration-200"
+              ></div>
               <img
-                src="img/app_icon.jpg"
-                alt="Salah Tracker App Icon"
-                class="relative w-24 h-24 md:w-32 md:h-32 rounded-[2rem] shadow-2xl"
+                src="img/app_logo_tactile.jpg"
+                alt="My Own Vocabulary App Icon"
+                class="relative w-24 h-24 md:w-32 md:h-32 rounded-[2rem] shadow-2xl object-cover"
               />
             </div>
           </div>
 
           <h1
-            class="text-6xl md:text-8xl heading-bold text-white leading-[0.9] mb-8"
+            class="text-6xl md:text-8xl heading-bold text-[var(--c-100)] leading-[0.9] mb-8"
           >
-            Salah Tracker <span class="text-emerald-500">App</span>
+            My Own <span class="text-[var(--c-500)]">Vocabulary</span>
           </h1>
-          <p class="max-w-3xl text-gray-400 text-xl font-light leading-relaxed mb-12">
-            We believe your spiritual journey should be sacred and free from
-            distractions.
-            <strong class="text-white">Salah Tracker App</strong> is the
-            ultimate
-            <span class="skill-tag text-emerald-500 border-emerald-500/20 bg-emerald-500/5 mx-2">100%_AD_FREE</span>
-            solution for tracking daily prayers, building habits, and
-            achieving personal growth.
+          <p
+            class="max-w-3xl text-[var(--c-300)] text-xl font-light leading-relaxed mb-8"
+          >
+            <span class="text-[var(--c-100)]"
+              >Save new words, practice with quizzes, and track your progress
+              over time.</span
+            >
+            Built with an offline-first philosophy, the app functions completely
+            without internet access, while seamlessly synchronizing to cloud
+            whenever you are online.
           </p>
 
           <div class="flex flex-wrap justify-center gap-6">
             <a
-              href="https://play.google.com/store/apps/details?id=com.sahed.salah_tracker"
+              href="https://play.google.com/store/apps/details?id=com.sahed.my_own_vocabulary"
               target="_blank"
               rel="noreferrer"
               class="cta-primary cta-large"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 466 511.98" width="24" height="24">
-               <g id="Layer_x0020_1">
-                <path fill="#EA4335" fill-rule="nonzero" d="M199.9 237.8l-198.5 232.37c7.22,24.57 30.16,41.81 55.8,41.81 11.16,0 20.93,-2.79 29.3,-8.37l0 0 244.16 -139.46 -130.76 -126.35z"/>
-                <path fill="#FBBC04" fill-rule="nonzero" d="M433.91 205.1l0 0 -104.65 -60 -111.61 110.22 113.01 108.83 104.64 -58.6c18.14,-9.77 30.7,-29.3 30.7,-50.23 -1.4,-20.93 -13.95,-40.46 -32.09,-50.22z"/>
-                <path fill="#34A853" fill-rule="nonzero" d="M199.42 273.45l129.85 -128.35 -241.37 -136.73c-8.37,-5.58 -19.54,-8.37 -30.7,-8.37 -26.5,0 -50.22,18.14 -55.8,41.86 0,0 0,0 0,0l198.02 231.59z"/>
-                <path fill="#4285F4" fill-rule="nonzero" d="M1.39 41.86c-1.39,4.18 -1.39,9.77 -1.39,15.34l0 397.64c0,5.57 0,9.76 1.4,15.34l216.27 -214.86 -216.28 -213.46z"/>
-               </g>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                shape-rendering="geometricPrecision"
+                text-rendering="geometricPrecision"
+                image-rendering="optimizeQuality"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                viewBox="0 0 466 511.98"
+                width="24"
+                height="24"
+              >
+                <g id="Layer_x0020_1">
+                  <path
+                    fill="#EA4335"
+                    fill-rule="nonzero"
+                    d="M199.9 237.8l-198.5 232.37c7.22,24.57 30.16,41.81 55.8,41.81 11.16,0 20.93,-2.79 29.3,-8.37l0 0 244.16 -139.46 -130.76 -126.35z"
+                  />
+                  <path
+                    fill="#FBBC04"
+                    fill-rule="nonzero"
+                    d="M433.91 205.1l0 0 -104.65 -60 -111.61 110.22 113.01 108.83 104.64 -58.6c18.14,-9.77 30.7,-29.3 30.7,-50.23 -1.4,-20.93 -13.95,-40.46 -32.09,-50.22z"
+                  />
+                  <path
+                    fill="#34A853"
+                    fill-rule="nonzero"
+                    d="M199.42 273.45l129.85 -128.35 -241.37 -136.73c-8.37,-5.58 -19.54,-8.37 -30.7,-8.37 -26.5,0 -50.22,18.14 -55.8,41.86 0,0 0,0 0,0l198.02 231.59z"
+                  />
+                  <path
+                    fill="#4285F4"
+                    fill-rule="nonzero"
+                    d="M1.39 41.86c-1.39,4.18 -1.39,9.77 -1.39,15.34l0 397.64c0,5.57 0,9.76 1.4,15.34l216.27 -214.86 -216.28 -213.46z"
+                  />
+                </g>
               </svg>
               Get it on Play Store
             </a>
@@ -200,41 +332,53 @@
         </div>
 
         <!-- Feature Graphic -->
-        <div
-          class="reveal bento-card mb-40 group"
-        >
+        <div class="reveal bento-card mb-40 group">
           <img
-            src="img/Salah-Tracker-App-Showcase.png"
+            src="img/feature-graphic-my-own-vocabulary.jpg"
             class="w-full h-auto opacity-90 group-hover:scale-[1.03] group-hover:opacity-100 transition-all duration-[1.5s] ease-out"
-            alt="Salah Tracker App Feature Showcase"
+            alt="My Own Vocabulary Feature Showcase"
           />
         </div>
 
-        <!-- Why Salah Tracker -->
+        <!-- Why My Own Vocabulary -->
         <div class="reveal mb-40 text-center">
-          <div class="tech-label text-violet-400 mb-6">/ CORE_BENEFITS</div>
-          <h2 class="text-4xl md:text-6xl heading-bold text-white mb-16">
-            Why Salah Tracker?
+          <div class="tech-label text-[var(--c-300)] mb-6">/ CORE_BENEFITS</div>
+          <h2 class="text-4xl md:text-6xl heading-bold text-[var(--c-100)] mb-16">
+            Why My Own Vocabulary?
           </h2>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div class="bento-card p-10 md:p-16 text-left">
-              <div class="skill-tag inline-block border-red-500/20 text-red-500 bg-red-500/5 mb-8">
+              <div
+                class="skill-tag inline-block border-[rgba(var(--c-500-rgb),0.20)] text-[var(--c-500)] bg-[rgba(var(--c-500-rgb),0.05)] mb-8"
+              >
                 NON_INTRUSIVE
               </div>
-              <h3 class="text-3xl font-black text-white mb-6 uppercase tracking-tight">100% Ad-Free</h3>
-              <p class="text-gray-400 leading-relaxed font-light text-lg">
+              <h3
+                class="text-3xl font-black text-[var(--c-100)] mb-6 uppercase tracking-tight"
+              >
+                100% Ad-Free
+              </h3>
+              <p class="text-[var(--c-300)] leading-relaxed font-light text-lg">
                 Zero interruptions. No pop-ups, no banners, and no video
-                ads—just you and your spiritual goals.
+                ads—just you and the words you're here to learn.
               </p>
             </div>
-            <div class="bento-card p-10 md:p-16 text-left border-violet-500/10">
-              <div class="skill-tag inline-block border-violet-500/20 text-violet-400 bg-violet-500/5 mb-8">
+            <div
+              class="bento-card p-10 md:p-16 text-left border-[rgba(var(--c-500-rgb),0.10)]"
+            >
+              <div
+                class="skill-tag inline-block border-[rgba(var(--c-500-rgb),0.20)] text-[var(--c-300)] bg-[rgba(var(--c-500-rgb),0.05)] mb-8"
+              >
                 PREMIUM_EXPERIENCE
               </div>
-              <h3 class="text-3xl font-black text-white mb-6 uppercase tracking-tight">Modern UI</h3>
-              <p class="text-gray-400 leading-relaxed font-light text-lg">
-                Experience a stunning interface with translucent "glassmorphism"
-                effects, smooth blurs, and premium animations.
+              <h3
+                class="text-3xl font-black text-[var(--c-100)] mb-6 uppercase tracking-tight"
+              >
+                Luxury Emerald UI
+              </h3>
+              <p class="text-[var(--c-300)] leading-relaxed font-light text-lg">
+                A tactile, glassmorphism interface with silky spring animations
+                and full support for Dark, Light, and System theme modes.
               </p>
             </div>
           </div>
@@ -243,69 +387,118 @@
         <!-- Screenshots Showcase -->
         <div class="reveal mb-40">
           <div class="flex flex-col items-center mb-20 gap-8">
-            <div class="tech-label text-emerald-500">/ VISUAL_INTERFACE</div>
-            <h2 class="text-4xl md:text-7xl heading-bold text-white text-center">
+            <div class="tech-label text-[var(--c-500)]">/ VISUAL_INTERFACE</div>
+            <h2
+              class="text-4xl md:text-7xl heading-bold text-[var(--c-100)] text-center"
+            >
               A Beautiful View
             </h2>
           </div>
 
           <div
-            class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-6 screenshot-grid"
+            class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 screenshot-grid"
           >
             <!-- Each screenshot in a subtle bento-card container -->
             <div class="bento-card group aspect-[9/19]">
               <img
-                src="img/salah-tracker-app-dark-screenshot (1).jpeg"
+                src="img/app-screen-1.jpeg"
                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[1.2s] screenshot-img"
-                alt="App View 1"
+                alt="My Own Vocabulary – Welcome & Google Sign-In"
                 loading="lazy"
               />
             </div>
             <div class="bento-card group aspect-[9/19]">
               <img
-                src="img/salah-tracker-app-dark-screenshot (2).jpeg"
+                src="img/app-screen-2.jpeg"
                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[1.2s] screenshot-img"
-                alt="App View 2"
+                alt="My Own Vocabulary – Vocabulary list with streak, search and filters"
                 loading="lazy"
               />
             </div>
             <div class="bento-card group aspect-[9/19]">
               <img
-                src="img/salah-tracker-app-dark-screenshot (3).jpeg"
+                src="img/app-screen-3.jpeg"
                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[1.2s] screenshot-img"
-                alt="App View 3"
+                alt="My Own Vocabulary – Add a new vocabulary word"
                 loading="lazy"
               />
             </div>
             <div class="bento-card group aspect-[9/19]">
               <img
-                src="img/salah-tracker-app-dark-screenshot (4).jpeg"
+                src="img/app-screen-4.jpeg"
                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[1.2s] screenshot-img"
-                alt="App View 4"
+                alt="My Own Vocabulary – Practice and quiz modes"
                 loading="lazy"
               />
             </div>
             <div class="bento-card group aspect-[9/19]">
               <img
-                src="img/salah-tracker-app-dark-screenshot (5).jpeg"
+                src="img/app-screen-5.jpeg"
                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[1.2s] screenshot-img"
-                alt="App View 5"
+                alt="My Own Vocabulary – Daily word activity calendar"
                 loading="lazy"
               />
             </div>
             <div class="bento-card group aspect-[9/19]">
               <img
-                src="img/salah-tracker-app-dark-screenshot (6).jpeg"
+                src="img/app-screen-6.jpeg"
                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[1.2s] screenshot-img"
-                alt="App View 6"
+                alt="My Own Vocabulary – Settings and account"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Onboarding Showcase -->
+        <div class="reveal mb-40">
+          <div class="flex flex-col items-center mb-20 gap-8">
+            <div class="tech-label text-[var(--c-300)]">/ FIRST_RUN</div>
+            <h2
+              class="text-4xl md:text-7xl heading-bold text-[var(--c-100)] text-center"
+            >
+              Getting Started
+            </h2>
+          </div>
+
+          <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
+            <div class="bento-card group aspect-[9/19]">
+              <img
+                src="img/onboarding-1.jpeg"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[1.2s]"
+                alt="Onboarding – Build your own vocabulary"
                 loading="lazy"
               />
             </div>
             <div class="bento-card group aspect-[9/19]">
               <img
-                src="img/salah-tracker-app-dark-screenshot (7).jpeg"
-                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[1.2s] screenshot-img"
-                alt="App View 7"
+                src="img/onboarding-2.jpeg"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[1.2s]"
+                alt="Onboarding – Organize with Language, Source and Folder"
+                loading="lazy"
+              />
+            </div>
+            <div class="bento-card group aspect-[9/19]">
+              <img
+                src="img/onboarding-3.jpeg"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[1.2s]"
+                alt="Onboarding – Add words in seconds"
+                loading="lazy"
+              />
+            </div>
+            <div class="bento-card group aspect-[9/19]">
+              <img
+                src="img/onboarding-4.jpeg"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[1.2s]"
+                alt="Onboarding – Practice and keep your streak"
+                loading="lazy"
+              />
+            </div>
+            <div class="bento-card group aspect-[9/19]">
+              <img
+                src="img/onboarding-5.jpeg"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[1.2s]"
+                alt="Onboarding – Never lose your words with cloud sync"
                 loading="lazy"
               />
             </div>
@@ -315,71 +508,238 @@
         <!-- Key Features Grid -->
         <div class="reveal mb-40">
           <div class="text-center mb-20">
-            <div class="tech-label text-violet-400 mb-6">/ SYSTEM_CAPABILITIES</div>
-            <h2 class="text-4xl md:text-6xl heading-bold text-white">
+            <div class="tech-label text-[var(--c-300)] mb-6">
+              / SYSTEM_CAPABILITIES
+            </div>
+            <h2 class="text-4xl md:text-6xl heading-bold text-[var(--c-100)]">
               Key Features
             </h2>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="bento-card p-10 hover:border-emerald-500/30">
-              <h3 class="text-2xl font-black text-emerald-500 mb-6 flex items-center gap-4">
-                <span class="w-8 h-8 rounded-lg bg-emerald-500/10 flex items-center justify-center text-sm">01</span>
-                Effortless Logging
+            <div class="bento-card p-10 hover:border-[rgba(var(--c-500-rgb),0.30)]">
+              <h3
+                class="text-2xl font-black text-[var(--c-500)] mb-6 flex items-center gap-4"
+              >
+                <span
+                  class="w-8 h-8 rounded-lg bg-[rgba(var(--c-500-rgb),0.10)] flex items-center justify-center text-sm"
+                  >01</span
+                >
+                🗂️ 3-Tier Folder Structure
               </h3>
-              <ul class="text-gray-400 space-y-4 font-light text-lg list-none">
+              <ul class="text-[var(--c-300)] space-y-4 font-light text-lg list-none">
                 <li class="flex items-start gap-3">
-                  <span class="text-emerald-500 mt-1.5">▹</span>
-                  Log Fajr, Dhuhr, Asr, Maghrib, and Isha with a single tap.
+                  <span class="text-[var(--c-500)] mt-1.5">▹</span>
+                  <span
+                    ><strong class="text-[var(--c-100)]"
+                      >Languages → Sources → Folders:</strong
+                    >
+                    Organize words with granular nesting, such as German →
+                    Grammar &amp; Verbs → Modal Verbs.</span
+                  >
                 </li>
                 <li class="flex items-start gap-3">
-                  <span class="text-emerald-500 mt-1.5">▹</span>
-                  Quickly classify prayers as On Time, Qaza, or Missed.
+                  <span class="text-[var(--c-500)] mt-1.5">▹</span>
+                  <span
+                    ><strong class="text-[var(--c-100)]"
+                      >Independent language pairs</strong
+                    >
+                    per folder (e.g. German → English, Spanish → English,
+                    Japanese → French).</span
+                  >
                 </li>
                 <li class="flex items-start gap-3">
-                  <span class="text-emerald-500 mt-1.5">▹</span>
-                  <strong class="text-white">Historical Editing:</strong> Easily go back and update your records.
+                  <span class="text-[var(--c-500)] mt-1.5">▹</span>
+                  <span
+                    ><strong class="text-[var(--c-100)]">Cascading filters</strong> to
+                    narrow your list by Language, Source, or Folder in a
+                    tap.</span
+                  >
                 </li>
               </ul>
             </div>
 
-            <div class="bento-card p-10 hover:border-violet-500/30">
-              <h3 class="text-2xl font-black text-violet-400 mb-6 flex items-center gap-4">
-                <span class="w-8 h-8 rounded-lg bg-violet-500/10 flex items-center justify-center text-sm">02</span>
-                Advanced Analytics
+            <div class="bento-card p-10 hover:border-[rgba(var(--c-300-rgb),0.30)]">
+              <h3
+                class="text-2xl font-black text-[var(--c-200)] mb-6 flex items-center gap-4"
+              >
+                <span
+                  class="w-8 h-8 rounded-lg bg-[rgba(var(--c-300-rgb),0.10)] flex items-center justify-center text-sm"
+                  >02</span
+                >
+                🎨 German Article &amp; Gender Colors
               </h3>
-              <ul class="text-gray-400 space-y-4 font-light text-lg list-none">
+              <ul class="text-[var(--c-300)] space-y-4 font-light text-lg list-none">
                 <li class="flex items-start gap-3">
-                  <span class="text-violet-500 mt-1.5">▹</span>
-                  <strong class="text-white">Dynamic Dashboard:</strong> Completion rates for today, week, and month.
+                  <span class="text-[var(--c-300)] mt-1.5">▹</span>
+                  <span
+                    ><strong class="text-[var(--c-100)]">Instant recognition</strong>
+                    with signature article color coding:
+                    <span class="text-blue-400 font-bold">der</span>,
+                    <span class="text-rose-400 font-bold">die</span>, and
+                    <span class="text-[var(--c-500)] font-bold">das</span>.
+                  </span>
                 </li>
                 <li class="flex items-start gap-3">
-                  <span class="text-violet-500 mt-1.5">▹</span>
-                  <strong class="text-white">7-Day Overview:</strong> Beautiful bar charts visualizing your habit.
+                  <span class="text-[var(--c-300)] mt-1.5">▹</span>
+                  <span
+                    ><strong class="text-[var(--c-100)]">Distinct badges</strong> for
+                    verbs, adjectives, adverbs, and phrases.</span
+                  >
                 </li>
                 <li class="flex items-start gap-3">
-                  <span class="text-violet-500 mt-1.5">▹</span>
-                  <strong class="text-white">Distribution:</strong> Comprehensive pie chart breakdowns.
+                  <span class="text-[var(--c-300)] mt-1.5">▹</span>
+                  <span
+                    ><strong class="text-[var(--c-100)]">One-tap filters</strong> for
+                    der, die, das, and favorites.</span
+                  >
                 </li>
               </ul>
             </div>
 
-            <div class="bento-card p-10 hover:border-emerald-500/30">
-              <h3 class="text-2xl font-black text-white mb-6 flex items-center gap-4 uppercase tracking-tight">
-                <span class="text-emerald-500">🔥</span> Build Your Streak
+            <div class="bento-card p-10 hover:border-[rgba(var(--c-500-rgb),0.30)]">
+              <h3
+                class="text-2xl font-black text-[var(--c-500)] mb-6 flex items-center gap-4"
+              >
+                <span
+                  class="w-8 h-8 rounded-lg bg-[rgba(var(--c-500-rgb),0.10)] flex items-center justify-center text-sm"
+                  >03</span
+                >
+                🧠 Active Recall Quizzes
               </h3>
-              <p class="text-gray-400 text-lg font-light leading-relaxed">
-                Stay motivated with a Current Streak counter that tracks your consecutive days of perfect prayer logs. Keep the fire burning!
-              </p>
+              <ul class="text-[var(--c-300)] space-y-4 font-light text-lg list-none">
+                <li class="flex items-start gap-3">
+                  <span class="text-[var(--c-500)] mt-1.5">▹</span>
+                  <span
+                    ><strong class="text-[var(--c-100)]">Multiple Choice:</strong> 4
+                    dynamic options with instant emerald/rose feedback.</span
+                  >
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-[var(--c-500)] mt-1.5">▹</span>
+                  <span
+                    ><strong class="text-[var(--c-100)]">3D Flashcards:</strong> flip to
+                    reveal and self-rate "Need Practice" or "Got It!".</span
+                  >
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-[var(--c-500)] mt-1.5">▹</span>
+                  <span
+                    ><strong class="text-[var(--c-100)]">Spelling test</strong> with
+                    accent-tolerant checking, plus a
+                    <strong class="text-[var(--c-100)]">Retry Mistakes</strong>
+                    mode.</span
+                  >
+                </li>
+              </ul>
             </div>
 
-            <div class="bento-card p-10 hover:border-violet-500/30">
-              <h3 class="text-2xl font-black text-white mb-6 flex items-center gap-4 uppercase tracking-tight">
-                <span class="text-violet-400">🔒</span> Secure Cloud Sync
+            <div class="bento-card p-10 hover:border-[rgba(var(--c-300-rgb),0.30)]">
+              <h3
+                class="text-2xl font-black text-[var(--c-200)] mb-6 flex items-center gap-4"
+              >
+                <span
+                  class="w-8 h-8 rounded-lg bg-[rgba(var(--c-300-rgb),0.10)] flex items-center justify-center text-sm"
+                  >04</span
+                >
+                📅 Calendar &amp; Streaks
               </h3>
-              <p class="text-gray-400 text-lg font-light leading-relaxed">
-                Sign in with Google to securely back up your data to the cloud. Access your logs across all your devices instantly and safely.
-              </p>
+              <ul class="text-[var(--c-300)] space-y-4 font-light text-lg list-none">
+                <li class="flex items-start gap-3">
+                  <span class="text-[var(--c-300)] mt-1.5">▹</span>
+                  <span
+                    ><strong class="text-[var(--c-100)]">Month grid</strong> with glowing
+                    indicators showing how many words you added each day.</span
+                  >
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-[var(--c-300)] mt-1.5">▹</span>
+                  <span
+                    ><strong class="text-[var(--c-100)]">Daily inspection:</strong> tap
+                    any day to review words, listen, or quick-add.</span
+                  >
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-[var(--c-300)] mt-1.5">▹</span>
+                  <span
+                    ><strong class="text-[var(--c-100)]">Hero streak tracker</strong> for
+                    your active daily learning streak.</span
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="bento-card p-10 hover:border-[rgba(var(--c-500-rgb),0.30)]">
+              <h3
+                class="text-2xl font-black text-[var(--c-500)] mb-6 flex items-center gap-4"
+              >
+                <span
+                  class="w-8 h-8 rounded-lg bg-[rgba(var(--c-500-rgb),0.10)] flex items-center justify-center text-sm"
+                  >05</span
+                >
+                🔊 Native Text-To-Speech
+              </h3>
+              <ul class="text-[var(--c-300)] space-y-4 font-light text-lg list-none">
+                <li class="flex items-start gap-3">
+                  <span class="text-[var(--c-500)] mt-1.5">▹</span>
+                  <span
+                    ><strong class="text-[var(--c-100)]">Authentic pronunciation</strong>
+                    via native TTS with automatic audio-focus ducking.</span
+                  >
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-[var(--c-500)] mt-1.5">▹</span>
+                  <span
+                    ><strong class="text-[var(--c-100)]">29+ languages</strong> from
+                    German and English to Japanese, Arabic, Bengali, and
+                    Hebrew.</span
+                  >
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-[var(--c-500)] mt-1.5">▹</span>
+                  <span
+                    ><strong class="text-[var(--c-100)]">Configurable:</strong> fine-tune
+                    speech rate and pitch, with auto-pronounce on save or in
+                    quiz.</span
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="bento-card p-10 hover:border-[rgba(var(--c-300-rgb),0.30)]">
+              <h3
+                class="text-2xl font-black text-[var(--c-200)] mb-6 flex items-center gap-4"
+              >
+                <span
+                  class="w-8 h-8 rounded-lg bg-[rgba(var(--c-300-rgb),0.10)] flex items-center justify-center text-sm"
+                  >06</span
+                >
+                🔒 Offline-First &amp; Cloud Sync
+              </h3>
+              <ul class="text-[var(--c-300)] space-y-4 font-light text-lg list-none">
+                <li class="flex items-start gap-3">
+                  <span class="text-[var(--c-300)] mt-1.5">▹</span>
+                  <span
+                    ><strong class="text-[var(--c-100)]">Local Room database</strong> for
+                    instant, fully offline reads and writes.</span
+                  >
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-[var(--c-300)] mt-1.5">▹</span>
+                  <span
+                    ><strong class="text-[var(--c-100)]">Google Sign-In</strong> via
+                    Credential Manager, or explore instantly in Guest / Offline
+                    mode.</span
+                  >
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-[var(--c-300)] mt-1.5">▹</span>
+                  <span
+                    ><strong class="text-[var(--c-100)]">Two-way Firestore sync</strong>
+                    plus complete JSON backup export and import.</span
+                  >
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -388,42 +748,92 @@
         <div
           class="reveal bento-card p-12 md:p-20 mb-40 relative overflow-hidden"
         >
-          <div class="absolute top-0 right-0 w-64 h-64 bg-emerald-500/5 blur-[100px] rounded-full"></div>
-          <div class="absolute bottom-0 left-0 w-64 h-64 bg-violet-500/5 blur-[100px] rounded-full"></div>
-          
+          <div
+            class="absolute top-0 right-0 w-64 h-64 bg-[rgba(var(--c-500-rgb),0.05)] blur-[100px] rounded-full"
+          ></div>
+          <div
+            class="absolute bottom-0 left-0 w-64 h-64 bg-[rgba(var(--c-300-rgb),0.05)] blur-[100px] rounded-full"
+          ></div>
+
           <div class="text-center mb-16 relative z-10">
-            <div class="tech-label text-emerald-500 mb-6">/ COMMUNITY_SUPPORT</div>
-            <h2 class="text-4xl md:text-6xl heading-bold text-white mb-6">
+            <div class="tech-label text-[var(--c-500)] mb-6">
+              / COMMUNITY_SUPPORT
+            </div>
+            <h2 class="text-4xl md:text-6xl heading-bold text-[var(--c-100)] mb-6">
               Support Our Mission
             </h2>
-            <p class="text-gray-400 text-xl font-light leading-relaxed max-w-2xl mx-auto">
-              If you benefit from this ad-free app, you may give Sadaqah to
-              support it for maintenance and future development.
+            <p
+              class="text-[var(--c-300)] text-xl font-light leading-relaxed max-w-2xl mx-auto"
+            >
+              My Own Vocabulary is free and 100% ad-free. If it helps you learn,
+              you may support its maintenance and future development.
             </p>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8 relative z-10">
             <!-- Stripe -->
-            <div class="bento-card p-10 flex flex-col items-center text-center group hover:border-[#635BFF]/30 transition-all">
-              <div class="w-16 h-16 bg-[#635BFF]/10 rounded-2xl flex items-center justify-center mb-8 text-[#635BFF]">
-                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path></svg>
+            <div
+              class="bento-card p-10 flex flex-col items-center text-center group hover:border-[rgba(var(--stripe-rgb),0.30)] transition-all"
+            >
+              <div
+                class="w-16 h-16 bg-[rgba(var(--stripe-rgb),0.10)] rounded-2xl flex items-center justify-center mb-8 text-[var(--stripe)]"
+              >
+                <svg
+                  class="w-8 h-8"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"
+                  ></path>
+                </svg>
               </div>
-              <h3 class="text-2xl font-black text-white mb-4 uppercase tracking-tight">International</h3>
-              <p class="text-gray-400 font-light mb-10 text-lg">Fast and secure international donations via Stripe.</p>
-              <a href="https://donate.stripe.com/3cI8wO6bWcqd7F46az8AE01" target="_blank" rel="noreferrer" class="cta-primary w-full justify-center !bg-[#635BFF] !text-white hover:!bg-[#524BFF]">
+              <h3
+                class="text-2xl font-black text-[var(--c-100)] mb-4 uppercase tracking-tight"
+              >
+                International
+              </h3>
+              <p class="text-[var(--c-300)] font-light mb-10 text-lg">
+                Fast and secure international donations via Stripe.
+              </p>
+              <a
+                href="https://donate.stripe.com/3cI8wO6bWcqd7F46az8AE01"
+                target="_blank"
+                rel="noreferrer"
+                class="cta-primary w-full justify-center !bg-[var(--stripe)] !text-[var(--c-100)] hover:!bg-[var(--stripe-hover)]"
+              >
                 Donate via Stripe
               </a>
             </div>
 
             <!-- bKash -->
-            <div class="bento-card p-10 flex flex-col items-center text-center group hover:border-[#E2136E]/30 transition-all">
-              <div class="w-16 h-16 bg-[#E2136E]/10 rounded-2xl flex items-center justify-center mb-8 text-[#E2136E]">
+            <div
+              class="bento-card p-10 flex flex-col items-center text-center group hover:border-[rgba(var(--bkash-rgb),0.30)] transition-all"
+            >
+              <div
+                class="w-16 h-16 bg-[rgba(var(--bkash-rgb),0.10)] rounded-2xl flex items-center justify-center mb-8 text-[var(--bkash)]"
+              >
                 <span class="font-bold text-3xl">b</span>
               </div>
-              <h3 class="text-2xl font-black text-white mb-4 uppercase tracking-tight">Bangladesh</h3>
-              <p class="text-gray-400 font-light mb-8 text-lg">Send Sadaqah via bKash Send Money to:</p>
-              <div class="w-full bg-white/5 border border-[#E2136E]/20 rounded-2xl p-6 flex flex-col items-center justify-center mb-10">
-                <span class="text-3xl font-black text-[#E2136E] tracking-[0.2em] mb-2">01773615582</span>
+              <h3
+                class="text-2xl font-black text-[var(--c-100)] mb-4 uppercase tracking-tight"
+              >
+                Bangladesh
+              </h3>
+              <p class="text-[var(--c-300)] font-light mb-8 text-lg">
+                Send support via bKash Send Money to:
+              </p>
+              <div
+                class="w-full bg-white/5 border border-[rgba(var(--bkash-rgb),0.20)] rounded-2xl p-6 flex flex-col items-center justify-center mb-10"
+              >
+                <span
+                  class="text-3xl font-black text-[var(--bkash)] tracking-[0.2em] mb-2"
+                  >01773615582</span
+                >
                 <span class="tech-label !text-[9px]">Personal Account</span>
               </div>
             </div>
@@ -431,25 +841,79 @@
         </div>
 
         <!-- Legal Links -->
-        <div class="reveal bento-card p-10 flex flex-col md:flex-row items-center justify-center gap-10">
-          <a href="privacy-policy.html" class="tech-label hover:text-emerald-500 transition-colors group flex items-center gap-3">
+        <div
+          class="reveal bento-card p-10 flex flex-col md:flex-row items-center justify-center gap-10"
+        >
+          <a
+            href="privacy-policy.html"
+            class="tech-label hover:text-[var(--c-500)] transition-colors group flex items-center gap-3"
+          >
             <span>Privacy_Policy</span>
-            <span class="group-hover:translate-x-1 transition-transform">→</span>
+            <span class="group-hover:translate-x-1 transition-transform"
+              >→</span
+            >
           </a>
           <div class="hidden md:block w-[1px] h-4 bg-white/10"></div>
-          <a href="data-deletion.html" class="tech-label hover:text-red-500 transition-colors group flex items-center gap-3">
+          <a
+            href="data-deletion.html"
+            class="tech-label hover:text-[var(--c-500)] transition-colors group flex items-center gap-3"
+          >
             <span>Data_Deletion_Request</span>
-            <span class="group-hover:translate-x-1 transition-transform">→</span>
+            <span class="group-hover:translate-x-1 transition-transform"
+              >→</span
+            >
           </a>
         </div>
       </section>
     </main>
 
     <!-- Footer -->
-    <footer class="py-12 border-t border-white/5 bg-[#050505] relative overflow-hidden">
-      <div class="max-w-7xl mx-auto px-6">
-        <p class="font-mono text-[9px] uppercase tracking-widest text-center md:text-left flex flex-wrap items-center justify-center md:justify-start gap-x-2 gap-y-1" style="color: var(--text-muted);"><span>© 2026 Sahed Alom Sumit //</span><a href="https://sahedalomsumit.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 hover:opacity-80 transition-opacity" style="text-decoration: none;"><span class="normal-case tracking-normal">Built with</span><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="#ef4444" stroke="#ef4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="transform-origin: center center; flex-shrink: 0; animation: 1.2s ease-in-out 0s infinite normal none running pulseHeart;"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path></svg><span class="normal-case tracking-normal">by</span><span class="normal-case tracking-normal" style="color: rgb(255, 135, 25); font-weight: 700;">Sahed</span></a></p>
+    <footer class="site-footer">
+      <div class="site-footer-bottom">
+        <p class="site-footer-legal">
+          <span>© <span id="year">2026</span> Sahed Alom Sumit //</span>
+          <a
+            href="https://sahedalomsumit.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="site-footer-credit"
+          >
+            <span class="site-footer-credit-text">Built with</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="11"
+              height="11"
+              viewBox="0 0 24 24"
+              fill="#ef4444"
+              stroke="#ef4444"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              style="
+                transform-origin: center center;
+                flex-shrink: 0;
+                animation: 1.2s ease-in-out 0s infinite normal none running
+                  pulseHeart;
+              "
+            >
+              <path
+                d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"
+              ></path>
+            </svg>
+            <span class="site-footer-credit-text">by</span>
+            <span class="site-footer-author">Sahed</span>
+          </a>
+        </p>
 
+        <div class="site-footer-meta">
+          <span>v1.2.3</span>
+          <span>•</span>
+          <span class="site-footer-place">
+            <span class="site-footer-dot"></span>
+            Helsinki (EEST / UTC+3)
+          </span>
+        </div>
       </div>
     </footer>
 
@@ -459,4 +923,3 @@
     </script>
   </body>
 </html>
-
