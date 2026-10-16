@@ -9,8 +9,6 @@
 </div>
 <br>
 
-Save new words, practice with quizzes, and track your progress over time.
-
 > [!NOTE]
 > This repository contains the web landing page and companion site for the My Own Vocabulary Android app.
 
