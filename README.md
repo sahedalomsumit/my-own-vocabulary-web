@@ -9,9 +9,7 @@
 </div>
 <br>
 
-[![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-
-A luxury, offline-first vocabulary companion. **My Own Vocabulary** helps you save new words, practice with quizzes, and track your progress over time through a beautiful, distraction-free interface.
+Save new words, practice with quizzes, and track your progress over time.
 
 > [!NOTE]
 > This repository contains the web landing page and companion site for the My Own Vocabulary Android app.
@@ -20,7 +18,6 @@ A luxury, offline-first vocabulary companion. **My Own Vocabulary** helps you sa
 
 ## ✨ Key Features
 
-- **🚫 100% Ad-Free**: No interruptions, no banners, no distractions. Just you and your words.
 - **🗂️ 3-Tier Folder Structure**: Organize vocabulary as **Languages → Sources → Folders** with independent language pairs and cascading filters.
 - **🎨 German Article & Gender Colors**: Instant recognition with signature color coding for `der` (blue), `die` (rose), and `das` (emerald), plus distinct part-of-speech badges.
 - **🧠 Active Recall Quizzes**: Multiple choice, 3D flashcards, spelling tests, and a dedicated "Retry Mistakes" mode.
