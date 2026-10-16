@@ -1,7 +1,7 @@
 # 🌿 My Own Vocabulary Web
 
 <div align="center">
-  <img src="img/feature-graphic-my-own-vocabulary.jpg" alt="My Own Vocabulary Feature Image" width="800">
+  <img src="img/feature-graphic-my-own-vocabulary.jpg" alt="My Own Vocabulary Feature Image" width="1200">
   <br>
   <a href="https://play.google.com/store/apps/details?id=com.sahed.my_own_vocabulary" target="_blank">
     <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" height="80">
